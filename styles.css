@@ -1,0 +1,260 @@
+html, body, #map {
+    height: 100%;
+    width: 100%;
+}
+html, body, h1,h2,h3,h4,h5,h6, ul, li,span{
+    margin:0;
+    padding:0;
+}
+* {
+    box-sizing: border-box;
+}
+body{
+    font-family: 'Open Sans', sans-serif;
+    font-size: 16px;
+    color: rgb(248, 218, 81);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+nav > h5{
+    margin-left: 1rem;
+}
+
+.main-navigation{
+    border-bottom:1px solid #ddd;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 9999;
+    width: 100%;
+    background-color: rgb(56, 56, 56);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    height: 3rem;
+  }
+  .nav-headers{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+  }
+
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    padding: 12px 16px;
+    z-index: 1;
+  }
+   .dropdown-content a{
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+   }
+  .nav-dropdown-toggle:hover .dropdown-content {
+    display: flex;
+    flex-direction: column;
+  }
+
+
+a:hover{
+    color: rgb(248, 218, 81);
+}
+
+.container{
+    width: 80%;
+    height: 80%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    transition:all 0.5s ease;
+    -webkit-transition:all;
+    -moz-transition:all;
+    -ms-transition:all;
+    -o-transition:all;
+}
+.form-container{
+    position: fixed;
+    top: 0;
+    left: 50;
+    z-index:900000;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: rgb(255, 220, 47);
+    padding: 0.75rem 0.75rem;
+    
+}
+.fullscreen{
+    width: 100%;
+    height: 100%;
+    transition:all 0.5s ease;
+
+}
+
+form{
+    width: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    color: black;
+    
+}
+.form-header{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+.input-group{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-bottom: 0.25rem;
+}
+label{
+    align-self: flex-start;
+    font-size: 0.75em;
+}
+.hidden{
+    display:none!important;
+}
+#map { 
+    height: 100%;
+    width: 100%;
+    padding:2rem; 
+    box-sizing: border-box;
+    transition:all 0.5s ease;
+}
+img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.leaflet-popup-content-wrapper,
+.leaflet-popup-tip {
+background: rgb(255, 220, 47)!important;
+box-shadow: 0 3px 14px rgba(0,0,0,0.4);
+color: rgb(248, 218, 81);
+}
+
+.popup-headline{
+    color: black;
+}
+.popup-desc{
+    color: black;
+}
+.popup-img{
+    border-radius: 5px;
+}
+
+.leaflet-control-add-marker{
+    background-color: rgb(255, 220, 47); 
+    width: 30px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.leaflet-control-open-nav{
+    background-color: #f4f4f4; 
+    width: 30px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.open{
+    background-color: #fff!important;
+}
+i{
+    color: black;
+    font-weight: bold;
+}
+.btn{
+    background-color: rgb(255, 220, 47);
+    color: black;
+    border: none;
+    padding: 0.5rem 1rem;
+    margin: 0.5rem;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+}
+.btn-close{
+    padding:0.5rem;
+    font-size: 1.5rem;
+}
+.text-btn{
+    margin-left:10px;
+}
+.notification{
+    position: fixed;
+    top:5%;
+    align-self: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding:0.5rem 0.75rem;
+    background-color:rgba(255, 220, 47,0.2); ;
+    border:2px solid rgb(255, 220, 47);
+    color:rgb(255, 220, 47);
+    font-weight: bold;
+    border-radius: 5px;
+    z-index: 100000;
+    -webkit-border-radius:;
+    -moz-border-radius:;
+    -ms-border-radius:;
+    -o-border-radius:;
+}
+
+
+@media only screen and (max-width: 600px) {
+    .container{
+        width: 100%;
+        height: 100%;
+    }
+    .form-container{
+        width: 100%;
+        height: 100%;
+        padding: 0;
+    }
+    .fullscreen{
+        width: 100%;
+        height: 100%;
+    }
+    #map { 
+        height: 100%;
+        width: 100%;
+        padding:0; 
+        box-sizing: border-box;
+    }
+    
+    nav{
+        bottom: 0;
+        margin-bottom: 1rem;
+        
+        border-radius: 5px;
+        -webkit-border-radius: 5px;
+        -moz-border-radius: 5px;
+        -ms-border-radius: 5px;
+        -o-border-radius: 5px; 
+    }
+    .nav-item{
+        color: #ffed93;
+    }
+
+
+}
