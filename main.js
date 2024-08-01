@@ -181,12 +181,12 @@ let navControl =  L.Control.extend({
     }
 });
 
-var Stadia_AlidadeSmoothDark = L.tileLayer('https://tiles.stadiamaps.com/tiles/alidade_smooth_dark/{z}/{x}/{y}{r}.png', {
+var Stadia_AlidadeSmoothDark = L.tileLayer('http://localhost:5000/getcoordinate?zCoordinate={z}&xCoordinate={x)&yCoordinate={y}', {
 	maxZoom: 20,
 });
 map.addControl(new customControl());
 map.addControl(new navControl());
-L.tileLayer('https://tiles.stadiamaps.com/tiles/alidade_smooth_dark/{z}/{x}/{y}{r}.png', {
+L.tileLayer('http://localhost:5000/getcoordinate?zCoordinate={z}&xCoordinate={x)&yCoordinate={y}', {
 }).addTo(map);
 
 //Copy coordinates on click, show notification and paste to form
