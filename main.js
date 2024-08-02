@@ -73,6 +73,8 @@ const locations = [{
     country: "DE"
 },
 ]
+
+
 const btnCloseForm = document.querySelector("#btn-close-form");
 const form = document.querySelector("#form");
 const formContainer = document.querySelector("#form-container");
@@ -86,6 +88,7 @@ btnCloseForm.addEventListener("click", function(event) {
         formContainer.classList.add("hidden");
     }
 });
+
 formSubmit.addEventListener("click", function(event){
     console.log("submit");
     event.preventDefault();
@@ -122,9 +125,13 @@ formSubmit.addEventListener("click", function(event){
 
     console.log(locations)
     saveLocation(newSpot);
-    createNavItem(newSpot);
+    //TODO: Fix this
+    //createNavItem(newSpot);
+
+    // Close Form via Submit button
     toggleForm();
-    saveData(newSpot)
+    
+    //saveData(newSpot)
     form.reset();
     //download newSpot as json file
     function saveData() {
@@ -137,7 +144,6 @@ formSubmit.addEventListener("click", function(event){
         // a.href = url;
         // a.click();
     }
-
 })
 
 
@@ -201,7 +207,10 @@ function(e){
     let text = `${lat}, ${lng}`;
     document.querySelector("#lat").value = lat;
     document.querySelector("#lng").value = lng;
-    getStreet(lat, lng);
+
+    //TODO: Implement
+    //getStreet(lat, lng);
+
     navigator.clipboard.writeText(text).then(function() {
      console.log('Async: Copying "'+text +'to clipboard was successful!');
      showCopyNotification();
@@ -252,7 +261,6 @@ async function saveLocation(location){
     markers.push(marker); 
 }
  async function setGeoData(location) {
-
     fetch(`https://nominatim.openstreetmap.org/reverse?format=jsonv2&lat=${location.geolocation.lat}&lon=${location.geolocation.lng}`)
     .then(function(response) {
         return response.json();
@@ -305,15 +313,21 @@ function toggleNav(){
     }
     else {
         navOpen.classList.add("open");
+    }   
+    if(navOpen.classList.contains("hidden")) {
+        navOpen.classList.toggle("hidden");
+        console.log("True");
     }
-    nav.classList.toggle("hidden");
     
 }
+
+//Open Form via Add Sot button
 const btnOpenForm = document.querySelector("#btn-open-form");
 btnOpenForm.addEventListener("click", function(event){
     event.preventDefault();
     toggleForm();
 })
+
 function toggleForm(){
     if (formContainer.classList.contains("hidden")) {
         formContainer.classList.remove("hidden");
@@ -321,5 +335,8 @@ function toggleForm(){
         formContainer.classList.add("hidden");
     }
 }
+
+
+
 
 
