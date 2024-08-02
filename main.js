@@ -183,14 +183,16 @@ let navControl =  L.Control.extend({
     }
 });
 
-var Stadia_AlidadeSmoothDark = L.tileLayer('http://localhost:5000/getcoordinate?zCoordinate={z}&xCoordinate={x)&yCoordinate={y}', {
-	maxZoom: 20,
-});
+// var Stadia_AlidadeSmoothDark = L.tileLayer('http://localhost:5000/getcoordinate?zCoordinate={z}&xCoordinate={x)&yCoordinate={y}', {
+// 	maxZoom: 20,
+// });
 map.addControl(new customControl());
 map.addControl(new navControl());
-L.tileLayer('http://localhost:5000/getcoordinate?zCoordinate={z}&xCoordinate={x)&yCoordinate={y}', {
+// L.tileLayer('http://localhost:5000/getcoordinate?zCoordinate={z}&xCoordinate={x)&yCoordinate={y}', {
+// }).addTo(map);
+L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
 }).addTo(map);
-
 //Copy coordinates on click, show notification and paste to form
 map.on('click', 
 function(e){
