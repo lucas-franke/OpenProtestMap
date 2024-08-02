@@ -125,8 +125,9 @@ formSubmit.addEventListener("click", function(event){
 
     console.log(locations)
     saveLocation(newSpot);
+    
     //TODO: Fix this
-    //createNavItem(newSpot);
+    createNavItem(newSpot);
 
     // Close Form via Submit button
     toggleForm();
@@ -290,7 +291,7 @@ async function CreateNavCity(location){
   
 }
 function createNavItem(location){
-    let navContainer = document.querySelector(`#${location.country}-${location.city}`);
+    let navContainer = document.querySelector(`.dropdown-content`);
     navContainer.innerHTML += `<a href="#${location.name}">${location.name}</a>`
     // <a class="nav-item" href="#${location.name}">${location.name}</a>
     // `;
