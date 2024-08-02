@@ -139,10 +139,12 @@ formSubmit.addEventListener("click", function(event){
     }
 
 })
+
+
+//Initialize Map
 let map = L.map('map').setView([53.55, 9.993], 13);
 
-
-//define fulsreen control button
+//define fullscreen control button
 
 let customControl =  L.Control.extend({        
     options: {
@@ -215,6 +217,9 @@ function showCopyNotification() {
         notification.classList.add("hidden");
     }, 4000)
 }
+
+
+
 let markers = [];
 
 locations.forEach((location)=>{
