@@ -183,16 +183,15 @@ let navControl =  L.Control.extend({
     }
 });
 
-// var Stadia_AlidadeSmoothDark = L.tileLayer('http://localhost:5000/getcoordinate?zCoordinate={z}&xCoordinate={x)&yCoordinate={y}', {
-// 	maxZoom: 20,
-// });
+
 map.addControl(new customControl());
 map.addControl(new navControl());
-// L.tileLayer('http://localhost:5000/getcoordinate?zCoordinate={z}&xCoordinate={x)&yCoordinate={y}', {
-// }).addTo(map);
+
+
 L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
     attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
 }).addTo(map);
+
 //Copy coordinates on click, show notification and paste to form
 map.on('click', 
 function(e){
@@ -226,7 +225,7 @@ let markers = [];
 
 locations.forEach((location)=>{
     setGeoData(location);
-    // saveLocation(location);
+    saveLocation(location);
 });
 async function saveLocation(location){
     //wait for fethced data then call setStreet
@@ -244,6 +243,7 @@ async function saveLocation(location){
     Longitude: ${location.geolocation.lng}<br>
     Latitude: ${location.geolocation.lat}</p>
     Address: ${location.street}<br>
+    Img: ${location.img} <br>
     <img src="${location.img}" class="popup-img" alt="Image of ${location.name}">
     <div class="google-link"><a target="_blank" href="https://www.google.de/maps/place/${location.geolocation.lat},${location.geolocation.lng}">Google Maps</a></div>
     `)
