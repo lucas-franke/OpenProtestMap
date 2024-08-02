@@ -7,7 +7,7 @@ import gzip
 from io import BytesIO
 
 
-api_key = "e9e80697-e365-459f-8ace-afffd3cf3715"
+api_key = "Insert-API-key"
 
 
 app = Flask(__name__)
