@@ -1,0 +1,84 @@
+[
+    {
+        "name": "Rothenburgsort",
+        "city": "Hamburg",
+        "district": "Rothenburgsort",
+        "geolocation": {
+            "lat": 53.527997,
+            "lng": 10.041561
+        },
+        "img": "https://lh5.googleusercontent.com/p/AF1QipNEw_rHamcGoTo0WHYxsfbf_8Rx2HVSaKF_UqtF=w408-h272-k-no",
+        "id": 1,
+        "street": "default",
+        "houseNumber": "default",
+        "country": "DE"
+    },
+    {
+        "name": "Lighthouse Zero",
+        "city": "Hamburg",
+        "district": "Hafencity",
+        "geolocation": {
+            "lat": 53.538453,
+            "lng": 10.003782
+        },
+        "img": "https://lh5.googleusercontent.com/p/AF1QipNEw_rHamcGoTo0WHYxsfbf_8Rx2HVSaKF_UqtF=w408-h272-k-no",
+        "id": 2,
+        "street": "default",
+        "houseNumber": "default",
+        "country": "DE"
+    },
+    {
+        "name": "M\u00fcllberg Hummelsb\u00fcttel",
+        "city": "Hamburg",
+        "district": "Hummelsb\u00fcttel",
+        "geolocation": {
+            "lat": 53.674082221321115,
+            "lng": 10.050298561390438
+        },
+        "img": "https://lh5.googleusercontent.com/p/AF1QipNEw_rHamcGoTo0WHYxsfbf_8Rx2HVSaKF_UqtF=w408-h272-k-no",
+        "id": 3,
+        "street": "default",
+        "houseNumber": "default",
+        "country": "DE"
+    },
+    {
+        "name": "Altonaer Balkon Aussichtspunkt",
+        "city": "Hamburg",
+        "district": "Altona",
+        "geolocation": {
+            "lat": 53.545243,
+            "lng": 9.915153
+        },
+        "img": "https://lh5.googleusercontent.com/p/AF1QipNEw_rHamcGoTo0WHYxsfbf_8Rx2HVSaKF_UqtF=w408-h272-k-no",
+        "id": 4,
+        "street": "default",
+        "houseNumber": "default",
+        "country": "DE"
+    },
+    {
+        "name": "Stadtpark Eichh\u00f6rnchen",
+        "city": "Cologne",
+        "district": "Winterhude",
+        "geolocation": {
+            "lat": 53.59843584184574,
+            "lng": 10.023464113402172
+        },
+        "img": "https://lh5.googleusercontent.com/p/AF1QipNEw_rHamcGoTo0WHYxsfbf_8Rx2HVSaKF_UqtF=w408-h272-k-no",
+        "id": 5,
+        "street": "default",
+        "houseNumber": "default",
+        "country": "DE"
+    },
+    {
+        "name": "Basketball Court",
+        "city": "Hamburg",
+        "district": "Neustadt",
+        "address": "undefined undefined",
+        "geolocation": {
+            "lat": "53.55438575537684",
+            "lng": "9.973788857460024"
+        },
+        "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6c/No_image_3x4.svg/1200px-No_image_3x4.svg.png",
+        "id": 8
+    }
+]
